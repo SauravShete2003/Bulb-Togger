@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb Togger</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 81vh;
+        }
+
+        .bulb-img {
+            width: 250px;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        .app-title {
+            text-align: center;
+            color: black;
+            padding-top: 10px;
+
+        }
+
+        .container {
+            background-color: white;
+            margin: 100px auto;
+            width: 350px;
+            height: 410px;
+            border-radius: 20px;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            background-blend-mode: multiply,multiply;
+            width: 80px;
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 30px;
+            margin-left: 50px;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3;
+            color: white;
+
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 5px 5px white;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 80%;
+                height: auto;
+            }
+
+            .bulb-img {
+                width: 150px;
+                margin-left: 70px;
+            }
+
+            .btn {
+                margin: 15px;
+                font-size: 16px;
+                /* margin: 30px auto; */
+                margin-left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-title">Bulb Togger</h1>
+        <img src="./bulb-off.png" id="bulb" class="bulb-img">
+
+        <div>
+            <button class="btn" onclick="bulbOn()">On</button>
+            <button class="btn" onclick="bulbOff()">Off</button>
+        </div>
+    </div>
+    <script>
+        function bulbOn() {
+            const bulbImg = document.getElementById("bulb")
+            bulbImg.src = "./bulb-on.png"
+        }
+
+        function bulbOff() {
+            const bulbImg = document.getElementById("bulb")
+            bulbImg.src = "./bulb-off.png"
+        }
+    </script>
+</body>
+
+</html>
